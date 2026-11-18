@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding so symbols and text display correctly. -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the layout fit mobile, tablet and desktop screen widths. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the text shown in the browser tab. -->
+    <title>Emergency Information Manager</title>
+
+    <!-- Connects this HTML file with the external CSS design file. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- The header contains the project name and its short description. -->
+    <header class="page-header">
+        <!-- Main heading of the website. -->
+        <h1>Emergency Information Manager</h1>
+
+        <!-- Short explanation shown below the main heading. -->
+        <p>Your important information in one place</p>
+    </header>
+
+    <!-- Main contains all the sections of the project. -->
+    <main class="main-container">
+
+        <!-- QUICK ACCESS SECTION: JavaScript displays saved personal contacts here. -->
+        <section class="quick-section">
+            <!-- Heading for the quick-access area. -->
+            <h2>Quick Access</h2>
+
+            <!-- JavaScript inserts quick contact links inside this empty container. -->
+            <div id="quick"></div>
+        </section>
+
+        <!-- EMERGENCY HELPLINES SECTION: These six cards are written directly in HTML. -->
+        <section class="helplines-section">
+            <!-- Section heading, similar to the reference picture. -->
+            <h2 class="helplines-heading">
+                <!-- Phone symbol used as a small heading icon. -->
+                <span class="heading-phone" aria-hidden="true">☎</span>
+                Emergency Helplines
+            </h2>
+
+            <!--
+                This notice highlights India's unified emergency number.
+                The tel: link asks a compatible phone to open its calling app.
+            -->
+            <div class="national-emergency-notice">
+                <strong>112 – National Emergency Number</strong>
+                <span>For police, fire and other urgent emergencies across India.</span>
+                <a href="tel:112" aria-label="Call India's national emergency number 112">Call 112</a>
+            </div>
+
+            <!--
+                The grid holds six helpline cards.
+                CSS changes the number of columns according to screen size.
+            -->
+            <div class="helpline-grid">
+
+                <!-- CARD 1: 108 emergency/disaster support. -->
+                <article class="helpline-card">
+                    <!-- Decorative phone icon; aria-hidden keeps screen readers from repeating it. -->
+                    <span class="helpline-icon" aria-hidden="true">☎</span>
+
+                    <!-- The phone number is also a clickable telephone link. -->
+                    <a class="helpline-number" href="tel:108">108</a>
+
+                    <!-- Name of the service. -->
+                    <h3>Emergency Response</h3>
+
+                    <!-- Short service description; availability can vary by state. -->
+                    <p>Disaster management and emergency support</p>
+                </article>
+
+                <!-- CARD 2: 102 National Ambulance Service. -->
+                <article class="helpline-card">
+                    <!-- Decorative phone icon. -->
+                    <span class="helpline-icon" aria-hidden="true">☎</span>
+
+                    <!-- Click to call 102 on a compatible phone. -->
+                    <a class="helpline-number" href="tel:102">102</a>
+
+                    <!-- Name of the service. -->
+                    <h3>Medical Emergency</h3>
+
+                    <!-- Description of the ambulance service. -->
+                    <p>National Ambulance Service</p>
+                </article>
+
+                <!-- CARD 3: 1075 COVID-19 helpline, not a general health helpline. -->
+                <article class="helpline-card">
+                    <!-- Decorative phone icon. -->
+                    <span class="helpline-icon" aria-hidden="true">☎</span>
+
+                    <!-- Click to call 1075 on a compatible phone. -->
+                    <a class="helpline-number" href="tel:1075">1075</a>
+
+                    <!-- Accurate service name. -->
+                    <h3>COVID-19 Helpline</h3>
+
+                    <!-- Note that current availability should be checked. -->
+                    <p>COVID-19 information; check current availability</p>
+                </article>
+
+                <!-- CARD 4: 1066 anti-poison helpline listing for New Delhi. -->
+                <article class="helpline-card">
+                    <!-- Decorative phone icon. -->
+                    <span class="helpline-icon" aria-hidden="true">☎</span>
+
+                    <!-- Click to call 1066 on a compatible phone. -->
+                    <a class="helpline-number" href="tel:1066">1066</a>
+
+                    <!-- Name of the service. -->
+                    <h3>Anti-Poison Helpline</h3>
+
+                    <!-- Clarifies that the cited listing is for New Delhi. -->
+                    <p>New Delhi listing; confirm local availability</p>
+                </article>
+
+                <!-- CARD 5: 1091 women helpline. -->
+                <article class="helpline-card">
+                    <!-- Decorative phone icon. -->
+                    <span class="helpline-icon" aria-hidden="true">☎</span>
+
+                    <!-- Click to call 1091 on a compatible phone. -->
+                    <a class="helpline-number" href="tel:1091">1091</a>
+
+                    <!-- Name of the service. -->
+                    <h3>Women Helpline</h3>
+
+                    <!-- Short description of the service. -->
+                    <p>Women in distress</p>
+                </article>
+
+                <!-- CARD 6: 1098 child helpline. -->
+                <article class="helpline-card">
+                    <!-- Decorative phone icon. -->
+                    <span class="helpline-icon" aria-hidden="true">☎</span>
+
+                    <!-- Click to call 1098 on a compatible phone. -->
+                    <a class="helpline-number" href="tel:1098">1098</a>
+
+                    <!-- Name of the service. -->
+                    <h3>Child Helpline</h3>
+
+                    <!-- Short description of the service. -->
+                    <p>Help for children in need</p>
+                </article>
+            </div>
+
+            <!-- Small reminder that emergency numbers and coverage can change. -->
+            <p class="helpline-disclaimer">
+                Helpline availability may depend on location and service coverage.
+                In an immediate emergency in India, use 112.
+            </p>
+        </section>
+
+        <!-- PERSONAL CONTACTS SECTION: Users can add and manage their own contacts. -->
+        <section class="personal-contacts-section">
+            <!-- Heading distinguishes user-added contacts from public helplines. -->
+            <h2>My Emergency Contacts</h2>
+
+            <!-- Form collects the details of one personal emergency contact. -->
+            <form id="contactForm">
+                <!-- Required input for the contact's full name. -->
+                <input id="name" type="text" placeholder="Full name" required>
+
+                <!-- Required input for the relationship with the user. -->
+                <input id="relation" type="text" placeholder="Relationship" required>
+
+                <!-- Required telephone input for the contact's phone number. -->
+                <input id="phone" type="tel" placeholder="Phone number" required>
+
+                <!-- Optional email input; the browser checks its email format. -->
+                <input id="email" type="email" placeholder="Email (optional)">
+
+                <!-- Submit button adds a contact or saves an edited contact. -->
+                <button id="contactSubmitButton" type="submit">Add Contact</button>
+
+                <!-- Cancel button is hidden until the user starts editing a contact. -->
+                <button id="cancelEditButton" class="secondary-button hidden" type="button">Cancel Edit</button>
+            </form>
+
+            <!-- JavaScript creates and displays the personal contact cards here. -->
+            <div id="contacts"></div>
+        </section>
+
+        <!-- MEDICAL INFORMATION SECTION: Stores allergies and important notes. -->
+        <section class="medical-section">
+            <!-- Heading for the medical information form. -->
+            <h2>Allergies &amp; Important Notes</h2>
+
+            <!-- Text area lets the user enter medical or emergency notes. -->
+            <textarea id="notes" placeholder="Enter allergies or important notes"></textarea>
+
+            <!-- Button saves the notes in browser localStorage. -->
+            <button id="saveNotes" type="button">Save Notes</button>
+        </section>
+
+        <!-- DOCUMENTS SECTION: Stores document names and optional web links. -->
+        <section class="documents-section">
+            <!-- Heading for important document references. -->
+            <h2>Important Documents</h2>
+
+            <!-- Form collects a document name and an optional link. -->
+            <form id="docForm">
+                <!-- Required input for the document's name. -->
+                <input id="docName" type="text" placeholder="Document name" required>
+
+                <!-- Optional URL input for a document reference link. -->
+                <input id="docLink" type="url" placeholder="Document link (optional)">
+
+                <!-- Submit button adds the document reference. -->
+                <button type="submit">Add Document</button>
+            </form>
+
+            <!-- JavaScript displays the saved document references here. -->
+            <div id="documents"></div>
+        </section>
+
+        <!-- PRIVACY SECTION explains the limits of this frontend-only project. -->
+        <section class="privacy-section">
+            <!-- Privacy heading. -->
+            <h2>Privacy Protection</h2>
+
+            <!-- Honest explanation of browser storage limitations. -->
+            <p>
+                This student project saves demo information in this browser only.
+                It has no login, encryption or server-side protection.
+                Use sample information rather than sensitive real details.
+            </p>
+        </section>
+
+        <!-- Button exports saved information as a JSON file. -->
+        <button id="export" class="export-button" type="button">Export Information</button>
+    </main>
+
+    <!-- Loads the JavaScript after the HTML elements have been created. -->
+    <script src="script.js"></script>
+</body>
+</html>

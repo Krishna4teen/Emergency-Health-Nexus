@@ -1,0 +1,318 @@
+/* Makes padding and borders part of an element's total width and height. */
+* {
+    box-sizing: border-box;
+}
+
+/* Sets the basic font, text colour, margin and page background. */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f6fb;
+    color: #203047;
+}
+
+/* Styles the top banner containing the project title. */
+.page-header {
+    background: #174a78;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px 10px;
+}
+
+/* Removes the default top margin from the main heading. */
+.page-header h1 {
+    margin: 0 0 6px;
+}
+
+/* Controls the width and position of the main page content. */
+.main-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 22px auto;
+}
+
+/* Gives each main section a white card-like appearance. */
+section {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #dce4ed;
+}
+
+/* Styles section headings consistently. */
+h2 {
+    margin-top: 0;
+    color: #174a78;
+    font-size: 19px;
+}
+
+/* Gives the quick-access section a light blue background. */
+.quick-section {
+    background: #e5f1ff;
+}
+
+/* Uses a two-column layout for the contact and document forms. */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+/* Gives text inputs and the notes area consistent dimensions and borders. */
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font: inherit;
+}
+
+/* Sets a comfortable height for the notes text area. */
+textarea {
+    min-height: 90px;
+    margin-bottom: 9px;
+    resize: vertical;
+}
+
+/* Defines the common appearance of all buttons. */
+button {
+    border: 0;
+    background: #1769aa;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* Darkens buttons slightly when the mouse pointer is over them. */
+button:hover {
+    background: #104d80;
+}
+
+/* Gives secondary buttons a neutral grey appearance. */
+.secondary-button {
+    background: #64748b;
+}
+
+/* Keeps the secondary button grey when the pointer is over it. */
+.secondary-button:hover {
+    background: #475569;
+}
+
+/* Hides an element until JavaScript removes the hidden class. */
+.hidden {
+    display: none;
+}
+
+/* Styles each personal contact or document row. */
+.item {
+    border-top: 1px solid #e1e7ef;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Removes extra spacing and sets readable text size inside list rows. */
+.item p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* Adds a small gap between action buttons inside a contact row. */
+.item button {
+    margin: 3px;
+}
+
+/* Styles the Call link in each personal contact row like a small button. */
+.small-action {
+    display: inline-block;
+    margin: 3px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: #1769aa;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Darkens the Call link when the mouse pointer is over it. */
+.small-action:hover {
+    background: #104d80;
+}
+
+/* Gives the privacy section a soft yellow background. */
+.privacy-section {
+    background: #fff6e5;
+}
+
+/* ---------------- EMERGENCY HELPLINE SECTION ---------------- */
+
+/* Gives the helpline area the same clean white card style as the reference. */
+.helplines-section {
+    background: #ffffff;
+    padding: 22px;
+}
+
+/* Aligns the phone symbol and the Emergency Helplines heading. */
+.helplines-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: #263447;
+}
+
+/* Colours the small phone symbol next to the section heading. */
+.heading-phone {
+    color: #a94e4e;
+    font-size: 23px;
+}
+
+/* Highlights India's unified emergency number above the six cards. */
+.national-emergency-notice {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border: 1px solid #edcaca;
+    border-radius: 9px;
+    background: #fff8f8;
+    color: #713b3b;
+}
+
+/* Makes the national emergency number stand out. */
+.national-emergency-notice strong {
+    font-size: 15px;
+}
+
+/* Lets the explanatory text use available space. */
+.national-emergency-notice span {
+    flex: 1;
+    font-size: 13px;
+}
+
+/* Styles the Call 112 link like a small action button. */
+.national-emergency-notice a {
+    color: #ffffff;
+    background: #a94e4e;
+    padding: 7px 11px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Creates three equal columns, like the supplied reference image. */
+.helpline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* Styles each individual pink emergency helpline card. */
+.helpline-card {
+    min-height: 160px;
+    padding: 18px 12px;
+    border: 1px solid #efd6d6;
+    border-radius: 11px;
+    background: #fff1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(130, 65, 65, 0.08);
+}
+
+/* Makes the phone icon large and dark red. */
+.helpline-icon {
+    color: #a94e4e;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+/* Styles the clickable helpline number. */
+.helpline-number {
+    color: #873f3f;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 7px;
+}
+
+/* Adds an underline when a user points to a helpline number. */
+.helpline-number:hover {
+    text-decoration: underline;
+}
+
+/* Styles the service name shown under each number. */
+.helpline-card h3 {
+    color: #713b3b;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+/* Styles the short description shown at the bottom of each card. */
+.helpline-card p {
+    color: #815b5b;
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Displays the reminder below the helpline cards. */
+.helpline-disclaimer {
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 14px 0 0;
+}
+
+/* Gives the export button a little space above it. */
+.export-button {
+    margin-bottom: 20px;
+}
+
+/* On tablets, changes the helpline cards from three columns to two. */
+@media (max-width: 760px) {
+    .helpline-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* On small phones, stacks forms and helpline cards into one column. */
+@media (max-width: 520px) {
+    .main-container {
+        width: 94%;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .helpline-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .helpline-card {
+        min-height: 145px;
+    }
+
+    .item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .national-emergency-notice {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
